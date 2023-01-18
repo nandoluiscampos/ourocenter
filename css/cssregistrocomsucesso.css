@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-color: #068bf8b6;
+}
+.sucess{
+    background-color: aliceblue;
+}
+.sucess h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 10%;
+}
+.sucess p{
+    text-align: center;   
+}
+button {
+    border-radius: 8px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #068bf8b6 ;
+    color: black
+}
+.sucess img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}

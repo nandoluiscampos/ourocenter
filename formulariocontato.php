@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cssformulario.css" />
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <title>Formulario de Contato Responsivo - John Pires</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="left-side">
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Telefone</div>
+            <div class="text-one">35 9 9767-0465 </div>
+            <div class="text-two">35 9 9727-6922</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">ourocentershopping@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Envie sua mensagem</div>
+          <p>
+            Se você tiver algum trabalho ou qualquer tipo de dúvida relacionado ao meu tutorial, você pode me enviar mensagem aqui. É um prazer ajudá-lo.
+          </p>
+          <form action="https://formsubmit.co/ourocentershopping@gmail.com"  method="post" enctype="text/plain">
+            <div class="input-box">
+              <input type="text" required placeholder="Digite seu nome" />
+            </div>
+            <div class="input-box">
+              <input type="text" required placeholder="Digite seu Telefone" />
+            </div>
+            <div class="input-box">
+              <input type="text" required placeholder="Digite seu email" />
+            </div>
+            <div class="input-box message-box">
+              <textarea required placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <div class="button">
+              <input type="submit" value="Enviar" />
+            </div>
+            <br>
+            <div class="button">
+              <a href="index.php"><input type="button" value="Voltar ao site" /></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
