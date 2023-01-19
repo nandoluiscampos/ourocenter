@@ -1,50 +1,45 @@
 <?php
-include('conexao.php');
+include('conexao2.php');
 
-if(isset($_POST['email']) || isset($_POST['senha'])) 
+if(isset($_POST['emailAdm']) || isset($_POST['senhaAdm'])) 
 {
 
-    if(strlen($_POST['email']) == 0 ) 
+    if(strlen($_POST['emailAdm']) == 0 ) 
     {
         echo "Preencha seu e-mail";
     } 
-    else if(strlen($_POST['senha']) == 0 ) 
+    else if(strlen($_POST['senhaAdm']) == 0 ) 
     {
         echo "Preencha sua senha";
     } 
-    else {
+    else
+   {
+      $emailAd = $conexao2->real_escape_string($_POST['emailAdm']);
+      $senhaAd = $conexao2->real_escape_string($_POST['senhaAdm']);
+      
+      $sql_code2 = "SELECT * FROM adcliente WHERE emailAdm = '$emailAd' AND senhaAdm = '$senhaAd'";
+      $sql_query2 = $conexao2->query($sql_code2) or die("Falha na execução do código SQL: " . $conexao2->error);
 
-      $email = $conexao->real_escape_string($_POST['email']);
-      $senha = $conexao->real_escape_string($_POST['senha']);
+      $quantidade2 = $sql_query2->num_rows;
 
-      $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-      $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
-
-      $quantidade = $sql_query->num_rows;
-
-      if($quantidade == 1 ) 
+      if($quantidade2 == 1)
       {
-         
-         $usuario = $sql_query->fetch_assoc();
-
          if(!isset($_SESSION)) {
-               session_start();
+            session_start();
          }
 
-         $_SESSION['id'] = $usuario['id'];
-         $_SESSION['nome'] = $usuario['nome'];
+         $_SESSION['idAdm'] = $usuario2['idAdm'];
+         $_SESSION['nomeAdm'] = $usuario2['nomeAdm'];
 
-      
          header("Location: index.php");
-      } 
+      }
       else 
       {
          echo "Falha ao logar! E-mail ou senha incorretos";
       }
 
     }
-
-}  
+} 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
@@ -57,15 +52,15 @@ if(isset($_POST['email']) || isset($_POST['senha']))
    <body>
       <div class="wrapper">
          <div class="title">
-            Ouro Center / Login
+            OuroCenter Empresas
          </div>
-         <form action="login.php" method="POST">
+         <form action="loginAdm.php" method="POST">
             <div class="field">
-               <input type="email" name="email" required>
+               <input type="email" name="emailAdm" required>
                <label>E-mail</label>
             </div>
             <div class="field">
-               <input type="password" name="senha" required>
+               <input type="password" name="senhaAdm" required>
                <label>Senha</label>
             </div>
             <div class="content">

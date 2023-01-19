@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <title>Site Oficial- Ouro Center</title>
 </head>
 <body>
@@ -26,10 +27,16 @@
                 <a href="formulariocontato.php"><button class="btn">Cadastre sua Loja</button></a>
             </div>
                 <div class="panel">
-                    <?php if(isset($_SESSION['id'])) { ?>
+                    <?php if(isset($_SESSION['id'])){ ?>
                     <p>Bem-vindo: <?php echo $_SESSION['nome'];?></p>
-                    <a href="meusdados.html"><button>Meus dados</button></a>
-                    <a href="painel.php"><button>Painel</button></a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Meus dados</button>
+                        <div class="dropdown-content">
+                        <a href="meusdados.html">Meus dados</a>
+                        <a href="trocarsenha.html">Trocar senha</a>
+                        <a href="logout.php">Sair</a>
+                        </div>
+                    </div>
                     <?php } else { ?>
                         <p>Seja bem vindo(a)</p>
                     <?php } ?>
@@ -144,6 +151,9 @@
             <div class="menu-lateral">
                 <ul>
                     <li>
+                        <a href="loginAdm.php">Login Empresas</a>
+                    </li>
+                    <li>
                         <a href="login.php">Login</a>
                     </li>
                     <li>
@@ -155,6 +165,7 @@
                     <li>
                         <a href="quemsomos.html">Quem Somos</a>
                     </li>
+                   
                 </ul>
             </div> 
             <br>
