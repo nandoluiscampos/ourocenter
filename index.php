@@ -27,7 +27,7 @@
                 <a href="formulariocontato.php"><button class="btn">Cadastre sua Loja</button></a>
             </div>
                 <div class="panel">
-                    <?php if(isset($_SESSION['id'])){ ?>
+                    <?php if(isset($_SESSION['id'])) { ?>
                     <p>Bem-vindo: <?php echo $_SESSION['nome'];?></p>
                     <div class="dropdown">
                         <button class="dropbtn">Meus dados</button>
@@ -37,6 +37,16 @@
                         <a href="logout.php">Sair</a>
                         </div>
                     </div>
+                    <?php } elseif(isset($_SESSION['idAdm'])) { ?>
+                        <p>Bem-vindo: <?php echo $_SESSION['nomeAdm'];?></p>
+                        <div class="dropdown">
+                           <button class="dropbtn">Meus dados</button>
+                           <div class="dropdown-content">
+                           <a href="meusdados.html">Meus dados</a>
+                           <a href="trocarsenha.html">Trocar senha</a>
+                           <a href="painel.php">Painel</a>
+                           <a href="logout.php">Sair</a>
+                        </div>
                     <?php } else { ?>
                         <p>Seja bem vindo(a)</p>
                     <?php } ?>

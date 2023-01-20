@@ -24,6 +24,8 @@ if(isset($_POST['emailAdm']) || isset($_POST['senhaAdm']))
 
       if($quantidade2 == 1)
       {
+         $usuario2 = $sql_query2->fetch_assoc(); 
+
          if(!isset($_SESSION)) {
             session_start();
          }

@@ -32,7 +32,6 @@
           <i class="bx bx-menu menu-icon"></i>
           <span class="logo-name">Ouro Center</span>
         </div>
-
         <div class="sidebar-content">
           <ul class="lists">
             <li class="list">
@@ -50,13 +49,13 @@
             <li class="list">
               <a href="#" class="nav-link">
                 <i class="bx bx-bell icon"></i>
-                <span class="link">Notifications</span>
+                <span class="link">Notificacões</span>
               </a>
             </li>
             <li class="list">
               <a href="#" class="nav-link">
                 <i class="bx bx-message-rounded icon"></i>
-                <span class="link">Messages</span>
+                <span class="link">Mensagens</span>
               </a>
             </li>
             <li class="list">
@@ -65,25 +64,13 @@
                 <span class="link">Analytics</span>
               </a>
             </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-heart icon"></i>
-                <span class="link">Likes</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-folder-open icon"></i>
-                <span class="link">Files</span>
-              </a>
-            </li>
           </ul>
 
           <div class="bottom-cotent">
             <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-cog icon"></i>
-                <span class="link">Configurações</span>
+              <a href="index.php" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Voltar ao site</span>
               </a>
             </li>
             <li class="list">
