@@ -30,8 +30,9 @@ if(isset($_POST['emailAdm']) || isset($_POST['senhaAdm']))
             session_start();
          }
 
-         $_SESSION['idAdm'] = $usuario2['idAdm'];
+         $_SESSION['idAdm'] =   $usuario2['idAdm'];
          $_SESSION['nomeAdm'] = $usuario2['nomeAdm'];
+         $_SESSION['lojaAdm'] = $usuario2['lojaAdm'];
 
          header("Location: index.php");
       }

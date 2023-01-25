@@ -1,5 +1,6 @@
 <?php
   include("protect.php");
+  include('conexao2.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cssPainel.css">
     <title>Sidebar Menu | Side Navigation Bar</title>
 
     <!-- CSS -->
@@ -20,11 +22,21 @@
       rel="stylesheet"
     />
   </head>
+  <header>
+        <div class="title">
+         <img src="imagens/bannerPainel.jpg" alt="capa">
+        </div>
+
+        <div class="titulo">
+            <h1>Ouro Center Empresas</h1>
+            <h2>Shopping Online</h2>
+        </div>
+    </header>
   <body>
     <nav>
       <div class="logo">
         <i class="bx bx-menu menu-icon"></i>
-        <span class="logo-name">Ouro Center</span>
+        <span class="logo-name">Ouro Center - Juninho Games</span>
       </div>
 
       <div class="sidebar">
@@ -43,7 +55,19 @@
             <li class="list">
               <a href="#" class="nav-link">
                 <i class="bx bx-bar-chart-alt-2 icon"></i>
-                <span class="link">Revenue</span>
+                <span class="link">Categorias</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="link">Cadastrar Produto</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="link">Editar Produto</span>
               </a>
             </li>
             <li class="list">
@@ -53,7 +77,7 @@
               </a>
             </li>
             <li class="list">
-              <a href="#" class="nav-link">
+              <a href="chat/login.php" class="nav-link">
                 <i class="bx bx-message-rounded icon"></i>
                 <span class="link">Mensagens</span>
               </a>
@@ -61,7 +85,7 @@
             <li class="list">
               <a href="#" class="nav-link">
                 <i class="bx bx-pie-chart-alt-2 icon"></i>
-                <span class="link">Analytics</span>
+                <span class="link">Redefinir senha</span>
               </a>
             </li>
           </ul>
